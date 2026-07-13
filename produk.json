@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "nama": "Lampu Tidur Minimalis",
+    "harga": "66879",
+    "rating": "4.9",
+    "gambar": "images/bedroom.png",
+    "kategori": "Kamar",
+    "link": "#"
+  },
+  {
+    "id": 2,
+    "nama": "Rak Dinding Kayu",
+    "harga": "37900",
+    "rating": "4.8",
+    "gambar": "images/bedroom.png",
+    "kategori": "Kamar",
+    "link": "#"
+  },
+  {
+    "id": 3,
+    "nama": "Tanaman Artificial",
+    "harga": "25900",
+    "rating": "4.9",
+    "gambar": "images/bedroom.png",
+    "kategori": "Kamar",
+    "link": "#"
+  }
+]
