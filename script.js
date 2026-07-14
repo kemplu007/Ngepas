@@ -110,3 +110,86 @@ roomCards.forEach((card) => {
 - Dark mode
 - Wishlist
 ==================================================*/
+
+/*==================================================
+ CHECKPOINT 2
+ Dynamic Product Loader
+==================================================*/
+
+/*==================================================
+ PRODUCT CONTAINER
+ Mengambil tempat produk pada halaman
+==================================================*/
+
+const productContainer = document.getElementById("product-list");
+
+/*==================================================
+ CREATE PRODUCT CARD
+ Membuat tampilan kartu produk
+==================================================*/
+
+function createProductCard(product){
+
+    return `
+
+    <div class="product-card">
+
+        <img
+            src="${product.image}"
+            alt="${product.name}">
+
+        <h3>${product.name}</h3>
+
+        <p class="price">
+
+            ${product.price}
+
+        </p>
+
+        <p>
+
+            ⭐ ${product.rating}
+
+        </p>
+
+        <a
+            href="${product.link}"
+            target="_blank"
+            class="buy-btn">
+
+            🛒 Lihat di Shopee
+
+        </a>
+
+    </div>
+
+    `;
+
+}
+
+/*==================================================
+ LOAD PRODUCT DATA
+ Mengambil data dari file produk.json
+==================================================*/
+
+async function loadProducts(){
+
+    const response = await fetch("produk.json");
+
+    const products = await response.json();
+
+    productContainer.innerHTML = "";
+
+    products.forEach((product)=>{
+
+        productContainer.innerHTML += createProductCard(product);
+
+    });
+
+}
+/*==================================================
+ START PRODUCT LOADER
+ Menjalankan fungsi saat website dibuka
+==================================================*/
+
+loadProducts();
