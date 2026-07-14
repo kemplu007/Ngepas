@@ -12,6 +12,75 @@ const productContainer = document.getElementById("product-list");
 const categoryContainer = document.getElementById("category-filter");
 let allProducts = [];
 let currentCategory = "all";
+const productTitle = document.getElementById("product-title");
+
+const productSubtitle = document.getElementById("product-subtitle");
+
+/*==================================================
+ UPDATE SECTION HEADER
+ Mengubah judul dan deskripsi
+ sesuai kategori yang dipilih
+==================================================*/
+
+function updateSectionTitle() {
+
+    const titles = {
+
+        all: {
+
+            title: "✨ Semua Produk",
+
+            subtitle: "Temukan produk pilihan terbaik untuk setiap ruangan di rumahmu."
+
+        },
+
+        bedroom: {
+
+            title: "🛏️ Bedroom Picks",
+
+            subtitle: "Inspirasi dan produk terbaik untuk kamar tidur yang nyaman."
+
+        },
+
+        kitchen: {
+
+            title: "🍳 Kitchen Picks",
+
+            subtitle: "Peralatan dan dekorasi dapur pilihan untuk aktivitas memasak."
+
+        },
+
+        livingroom: {
+
+            title: "🛋️ Living Room Picks",
+
+            subtitle: "Lengkapi ruang tamu agar terasa hangat dan nyaman."
+
+        },
+
+        bathroom: {
+
+            title: "🛁 Bathroom Picks",
+
+            subtitle: "Produk pilihan untuk kamar mandi yang bersih dan elegan."
+
+        },
+
+        coffee: {
+
+            title: "☕ Coffee Corner Picks",
+
+            subtitle: "Semua yang kamu butuhkan untuk sudut ngopi favoritmu."
+
+        }
+
+    };
+
+    productTitle.textContent = titles[currentCategory].title;
+
+    productSubtitle.textContent = titles[currentCategory].subtitle;
+
+}
 
 /*==================================================
  CREATE PRODUCT CARD
@@ -82,7 +151,7 @@ function renderCategories() {
         categoryContainer.innerHTML += `
 
             <button
-                class="category-btn"
+                class="category-btn ${currentCategory === category.id ? "active" : ""}"
                 data-category="${category.id}">
 
                 ${category.title}
@@ -106,6 +175,7 @@ categoryContainer.addEventListener("click", (e) => {
 
     currentCategory = e.target.dataset.category;
 
+  renderCategories();
     loadProducts();
 
 });
@@ -122,6 +192,7 @@ async function loadProducts() {
 
     // Render tombol kategori
     renderCategories();
+  updateSectionTitle();
 
     if (currentCategory === "all") {
 

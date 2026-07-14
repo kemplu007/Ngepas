@@ -69,11 +69,14 @@
 
 .room:hover{
 
-    transform:translateY(-10px);
+    transform:
+    translateY(-12px);
 
-    border-color:#2E6F4F22;
+    border-color:#2E6F4F55;
 
-    box-shadow:0 30px 55px rgba(0,0,0,.12);
+    box-shadow:
+
+    0 35px 60px rgba(46,111,79,.18);
 
 }
 
@@ -99,17 +102,29 @@
 
 .room:hover img{
 
-    transform:scale(1.05);
+    transform:
+    scale(1.08)
+    rotate(.5deg);
 
 }
 
 .room h3{
 
-    margin-top:20px;
+    margin-top:22px;
 
     font-size:28px;
 
+    font-weight:700;
+
     color:#2E6F4F;
+
+    transition:.3s;
+
+}
+
+.room:hover h3{
+
+    letter-spacing:.5px;
 
 }
 
@@ -117,11 +132,50 @@
 
     max-width:280px;
 
-    margin:12px auto 0;
+    margin:14px auto 0;
 
-    color:#777;
+    color:#707070;
 
-    line-height:1.8;
+    line-height:1.9;
+
+    font-size:15px;
 
 }
 
+.room::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(circle at top left,
+
+    rgba(46,111,79,.12),
+
+    transparent 60%);
+
+    opacity:0;
+
+    transition:.4s;
+
+}
+
+.room:hover::before{
+
+    opacity:1;
+
+}
+
+.category-btn.active{
+
+    background:#2E6F4F;
+
+    color:#fff;
+
+    box-shadow:0 12px 25px rgba(46,111,79,.30);
+
+}

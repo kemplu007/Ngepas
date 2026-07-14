@@ -56,3 +56,31 @@
     }
 
 }
+
+.preview{
+
+    width:92%;
+
+    margin:110px auto;
+
+    gap:22px;
+
+}
+
+.room{
+
+    padding:20px;
+
+}
+
+.room img{
+
+    height:210px;
+
+}
+
+.room h3{
+
+    font-size:24px;
+
+}
