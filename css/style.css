@@ -644,3 +644,13 @@ footer p{
     font-weight:600;
 
 }
+/*==================================================
+ NGEPAS STYLE.CSS
+ Main Import File
+==================================================*/
+
+@import url("main.css");
+@import url("home.css");
+@import url("category.css");
+@import url("products.css");
+@import url("responsive.css");

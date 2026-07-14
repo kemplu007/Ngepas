@@ -1,0 +1,58 @@
+
+/*==================================================
+ NGEPAS RESPONSIVE.CSS v1.0
+ Project : Ngepas
+ Version : 1.0
+ Author  : Akim & ChatGPT
+==================================================*/
+
+
+/*==================================================
+11. RESPONSIVE
+==================================================*/
+
+@media(max-width:768px){
+
+    header{
+
+        padding:18px 6%;
+
+    }
+
+    .logo{
+
+        font-size:24px;
+
+    }
+
+    nav{
+
+        gap:18px;
+
+    }
+
+    nav a{
+
+        font-size:15px;
+
+    }
+
+    .hero h1{
+
+        font-size:52px;
+
+    }
+
+    .hero p{
+
+        font-size:17px;
+
+    }
+
+    .section-title{
+
+        font-size:32px;
+
+    }
+
+}

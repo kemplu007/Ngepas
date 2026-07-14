@@ -1,0 +1,285 @@
+
+/*==================================================
+ NGEPAS HOME.CSS v1.0
+ Project : Ngepas
+ Version : 1.0
+ Author  : Akim & ChatGPT
+==================================================*/
+
+
+/*==================================================
+ 3. HEADER
+==================================================*/
+
+header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    width:100%;
+
+    min-height:82px;
+
+    padding:22px 8%;
+
+    gap:20px;
+
+    background:rgba(247,244,238,.90);
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid rgba(0,0,0,.05);
+
+    z-index:999;
+
+}
+
+.logo{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:#2E6F4F;
+
+    letter-spacing:-1px;
+
+}
+
+nav{
+
+    display:flex;
+
+    gap:36px;
+
+    overflow-x:auto;
+
+    scrollbar-width:none;
+
+}
+
+nav::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+nav a{
+
+    padding:10px 6px;
+
+    border-radius:10px;
+
+    color:#444;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+nav a:hover{
+
+    color:#2E6F4F;
+
+    background:#eef7f1;
+
+}
+
+/*==================================================
+ 4. HERO
+==================================================*/
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:170px 25px 100px;
+
+}
+
+.hero h1{
+
+    font-size:clamp(42px,8vw,70px);
+
+    font-weight:800;
+
+    line-height:1.1;
+
+    letter-spacing:-2px;
+
+}
+
+.hero h2{
+
+    margin-top:10px;
+
+    font-size:clamp(28px,5vw,42px);
+
+}
+
+.hero span{
+
+    color:#2E6F4F;
+
+}
+
+.hero p{
+
+    max-width:650px;
+
+    margin-top:20px;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#666;
+
+}
+
+/*==================================================
+ 5. BUTTON
+==================================================*/
+
+.btn{
+
+    display:inline-block;
+
+    margin-top:30px;
+
+    padding:18px 40px;
+
+    border-radius:60px;
+
+    background:#2E6F4F;
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:.3s ease;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 20px 40px rgba(46,111,79,.35);
+
+}
+
+.btn:active{
+
+    transform:scale(.97);
+
+}
+
+/*==================================================
+ 6. STATS
+==================================================*/
+
+.stats{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:50px;
+
+    margin-top:60px;
+
+}
+
+.stats h2{
+
+    font-size:38px;
+
+    color:#2E6F4F;
+
+}
+
+.stats p{
+
+    margin-top:6px;
+
+    color:#777;
+
+}
+
+
+
+
+/*==================================================
+ 9. FOOTER
+==================================================*/
+
+footer{
+
+    margin-top:100px;
+
+    padding:60px 30px;
+
+    text-align:center;
+
+    background:#2E6F4F;
+
+    color:#fff;
+
+}
+
+footer h2{
+
+    font-size:32px;
+
+}
+
+footer p{
+
+    margin-top:12px;
+
+    opacity:.9;
+
+}
+
+/*==================================================
+10. ANIMATION
+==================================================*/
+
+.hidden{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:all .8s ease;
+
+}
+
+.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+

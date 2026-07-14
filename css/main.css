@@ -1,0 +1,86 @@
+/*==================================================
+ NGEPAS MAIN.CSS v1.0
+ Project : Ngepas
+ Version : 1.0
+ Author  : Akim & ChatGPT
+==================================================*/
+
+
+/*==================================================
+ 1. RESET
+==================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    overflow-x:hidden;
+    font-family:'Poppins',sans-serif;
+    color:#222;
+    background:#F7F4EE;
+
+    background-image:
+    radial-gradient(circle at top left,#d8efe1 0%,transparent 35%),
+    radial-gradient(circle at bottom right,#e7f5ec 0%,transparent 40%);
+}
+
+/*==================================================
+ 2. GLOBAL
+==================================================*/
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+section{
+    padding:80px 8%;
+}
+
+.section-title{
+
+    margin-bottom:45px;
+
+    text-align:center;
+
+    font-size:40px;
+
+    color:#2E6F4F;
+
+}
+
+a{
+    text-decoration:none;
+    transition:.3s ease;
+}
+
+/*==================================================
+ BADGE
+==================================================*/
+
+.badge{
+
+    display:inline-block;
+
+    margin-top:12px;
+
+    padding:6px 14px;
+
+    border-radius:30px;
+
+    background:#eef7f1;
+
+    color:#2E6F4F;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
