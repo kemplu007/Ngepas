@@ -9,6 +9,7 @@
 ==================================================*/
 
 const productContainer = document.getElementById("product-list");
+const categoryContainer = document.getElementById("category-filter");
 let allProducts = [];
 let currentCategory = "all";
 
@@ -68,6 +69,48 @@ function renderProducts(products) {
 }
 
 /*==================================================
+ RENDER CATEGORIES
+ Membuat tombol kategori secara otomatis
+==================================================*/
+
+function renderCategories() {
+
+    categoryContainer.innerHTML = "";
+
+    categories.forEach(category => {
+
+        categoryContainer.innerHTML += `
+
+            <button
+                class="category-btn"
+                data-category="${category.id}">
+
+                ${category.title}
+
+            </button>
+
+        `;
+
+    });
+
+}
+
+/*==================================================
+ CATEGORY FILTER
+ Filter produk berdasarkan kategori
+==================================================*/
+
+categoryContainer.addEventListener("click", (e) => {
+
+    if (!e.target.classList.contains("category-btn")) return;
+
+    currentCategory = e.target.dataset.category;
+
+    loadProducts();
+
+});
+
+/*==================================================
  LOAD PRODUCT DATA
 ==================================================*/
 
@@ -75,25 +118,26 @@ async function loadProducts() {
 
     const response = await fetch("data/products.json");
 
-allProducts = await response.json();
+    allProducts = await response.json();
 
-if(currentCategory === "all"){
+    // Render tombol kategori
+    renderCategories();
 
-    renderProducts(allProducts);
+    if (currentCategory === "all") {
 
-}else{
+        renderProducts(allProducts);
 
-    const filtered = allProducts.filter(product => {
+    } else {
 
-        return product.category === currentCategory;
+        const filtered = allProducts.filter(product => {
 
-    });
+            return product.category === currentCategory;
 
-    renderProducts(filtered);
+        });
 
-}
+        renderProducts(filtered);
 
-
+    }
 
 }
 
