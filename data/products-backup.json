@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "name": "Lampu Tidur Minimalis",
+        "price": 66879,
+        "rating": 4.9,
+        "image": "images/bedroom.png",
+        "category": "bedroom",
+        "link": "#"
+    },
+    {
+        "id": 2,
+        "name": "Rak Dinding Kayu",
+        "price": 37900,
+        "rating": 4.8,
+        "image": "images/bedroom.png",
+        "category": "bedroom",
+        "link": "#"
+    },
+    {
+        "id": 3,
+        "name": "Tanaman Artificial",
+        "price": 25900,
+        "rating": 4.9,
+        "image": "images/bedroom.png",
+        "category": "bedroom",
+        "link": "#"
+    },
+    {
+        "id": 4,
+        "name": "Rak Bumbu Dapur",
+        "price": 49900,
+        "rating": 4.8,
+        "image": "images/kitchen.png",
+        "category": "kitchen",
+        "link": "#"
+    },
+    {
+        "id": 5,
+        "name": "Wajan Anti Lengket",
+        "price": 89900,
+        "rating": 4.9,
+        "image": "images/kitchen.png",
+        "category": "kitchen",
+        "link": "#"
+    },
+    {
+        "id": 6,
+        "name": "French Press",
+        "price": 129000,
+        "rating": 4.9,
+        "image": "images/coffeecorner.png",
+        "category": "coffee",
+        "link": "#"
+    },
+    {
+        "id": 7,
+        "name": "Gelas Kopi Keramik",
+        "price": 39900,
+        "rating": 4.8,
+        "image": "images/coffeecorner.png",
+        "category": "coffee",
+        "link": "#"
+    }
+]
